@@ -15,7 +15,7 @@
     "express"
   ],
   "author": "Artem",
-  "license": "ISC",
+  "license": "GPL-2.0",
   "dependencies": {
     "express": "^4.18.2"
   },
