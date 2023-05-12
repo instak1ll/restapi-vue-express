@@ -29,7 +29,7 @@ new Vue({
             contact.marked = true
         },
         removeContact(id) {
-
+            this.contacts = this.contacts.filter(c => c.id !== id)
         }
     }
 })
