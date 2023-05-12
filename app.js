@@ -3,23 +3,31 @@ const path = require('path')
 const { v4 } = require('uuid')
 const app = express()
 
-const CONTACTS = [
+let CONTACTS = [
     { id: v4, name: 'Artem', value: '+34-639-837-382', marked: false },
     { id: v4, name: 'Pedro', value: '+34-539-337-632', marked: false }
 ]
 
 app.use(express.json())
 
+//GET
 app.get('/api/contacts', (req, res) => {
     setTimeout(() => {
         res.status(200).json(CONTACTS)
     }, 1000);
 })
 
+//POST
 app.post('/api/contacts', (req, res) => {
     const contact = { ...req.body, id: v4(), marked: false }
     CONTACTS.push(contact)
     res.status(201).json(contact)
+})
+
+//DELETE
+app.delete('/api/contacts/:id', (req, res) => {
+    CONTACTS = CONTACTS.filter(c => c.id !== req.params.id)
+    res.status(200).json({ message: 'Contacto fue eliminado' })
 })
 
 app.use(express.static(path.resolve(__dirname, 'client')))
