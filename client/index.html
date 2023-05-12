@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>REST API</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,17 +28,21 @@
                 <label for="value" class="mr-3">Valor</label>
                 <input type="text" class="form-control" id="value" v-model="form.value">
             </div>
-            <button class="btn btn-primary" type="submit">Crear</button>
+            <button class="btn btn-primary" type="submit" :disabled="!canCreate">Crear</button>
         </form>
 
-        <div class="card mb-3" v-for="contact in contacts">
-            <div class="card-body">
-                <h5 class="card-title">{{contact.name}}</h5>
-                <p class="card-text">{{contact.value}}</p>
-                <button class="btn btn-primary">Cancelar</button>
-                <button class="btn btn-danger">Eliminar</button>
+        <div v-if="contacts.length">
+            <div class="card mb-3" v-for="contact in contacts">
+                <div class="card-body">
+                    <h5 class="card-title" :style="{color: contact.marked ? 'red' : 'black'}">{{contact.name}}</h5>
+                    <p class="card-text">{{contact.value}}</p>
+                    <button class="btn btn-primary" @click="markContact(contact.id)"
+                        :disabled="contact.marked">Marcar</button>
+                    <button class="btn btn-danger" @click="removeContact(contact.id)">Eliminar</button>
+                </div>
             </div>
         </div>
+        <p v-else>No hay contactos</p>
     </div>
     <script type="module" src="frontend.js"></script>
 </body>
