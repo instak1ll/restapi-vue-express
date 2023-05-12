@@ -29,21 +29,18 @@ Este es un ejemplo de una aplicación REST API desarrollada con Vue.js y Express
 - Vue.js
 - Express.js
 - Bootstrap
-
+- 
 ## Contribución
 
-Si quieres contribuir a este proyecto, por favor sigue los siguientes pasos:
-
-1. Crea un fork del repositorio.
-2. Crea una rama con la nueva funcionalidad: `git checkout -b feature/nueva-funcionalidad`.
-3. Realiza los cambios necesarios y realiza los commits: `git commit -m 'Agregada nueva funcionalidad'`.
-4. Push a la rama creada: `git push origin feature/nueva-funcionalidad`.
-5. Abre un pull request en este repositorio.
+Las contribuciones son bienvenidas. Si tienes alguna sugerencia, mejora o corrección, por favor, abre un issue o envía una pull request.
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia GNU General Public License v2.0. Consulta el archivo `COPYING` para más detalles.
+Esta extensión se distribuye bajo GNU General Public License. Consulta el archivo COPYING para más información.
 
----
+## Contacto
 
-© 2023 Artem. Todos los derechos reservados.
+Si tienes alguna pregunta o consulta, puedes ponerte en contacto mediante
+
+- Linkedin: [`in/artemgladkov`](https://www.linkedin.com/in/artemgladkov/)
+- Twitter: [`@Art3mDev`](https://twitter.com/Art3mDev).
