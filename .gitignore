@@ -1,2 +1,10 @@
-.idea
-node_modules
+node_modules/
+package-lock.json
+.env
+/dist/
+/build/
+/logs/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
