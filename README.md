@@ -40,8 +40,6 @@ Si quieres contribuir a este proyecto, por favor sigue los siguientes pasos:
 4. Push a la rama creada: `git push origin feature/nueva-funcionalidad`.
 5. Abre un pull request en este repositorio.
 
-¡Gracias por tu contribución!
-
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia GNU General Public License v2.0. Consulta el archivo `COPYING` para más detalles.
